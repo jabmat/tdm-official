@@ -1,0 +1,132 @@
+body {
+	/* background: black; */
+	font-family: 'VT323', monospace;
+	color: blue;
+}
+
+/* .vt323-regular {
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+/* TO DO add fadeIn do elementów splash? */
+.splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	z-index: 200;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.opacity-none {
+	opacity: 0;
+	z-index: -10;
+	transition: all 0.5s;
+}
+
+/* wyśrodkowanie treści introduction */
+.introduction {
+	/* border: 2px solid; */
+	width: 100%;
+	height: auto;
+	max-width: 560px;
+	/* margin: auto; */
+	/* padding: 50% 0; */
+	/* text-align: center; */
+	/* vertical-align: middle; */
+}
+
+.label-entry {
+	text-align: center;
+}
+
+/* TO DO - potrzebne? */
+.label-entry h1 {
+	margin: 0;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.label-entry > h1 > span {
+	font-size: 30px;
+}
+
+.label-entry > span {
+	display: inline-block;
+	margin: 20px 0 30px 0;
+	font-size: 25px;
+	letter-spacing: 7px;
+}
+
+/* entry - youtube */
+
+.entry-attach {
+	text-align: center;
+	border-top: 1px solid grey;
+	padding: 25px 0px 0px 0px;
+}
+
+.entry-button {
+	background: none;
+	border: none;
+	padding: 0;
+	/*optional*/
+	font-family: 'VT323', monospace;
+	/*input has OS specific font-family*/
+	color: white;
+	cursor: pointer;
+	font-size: 25px;
+	letter-spacing: 7px;
+	/* text-decoration: underline; */
+	border-bottom: 1px solid grey;
+	/* text-transform: uppercase; */
+}
+
+.entry-button:hover {
+	/* transition: transform 0.3s;
+	transform: scale(1.2, 1.2); */
+	transition: opacity 0.5s;
+	opacity: 0.5;
+}
+
+.latest-track h2 {
+	font-size: 25px;
+	margin: 10px 0px 10px 0px;
+}
+
+.youtube-placeholder {
+	position: relative;
+	display: inline-flex;
+	cursor: pointer;
+	width: 100%;
+	max-width: 560px;
+}
+
+.youtube-placeholder img {
+	width: 100%;
+}
+
+/* TO DO - onClick inline? logika JS? */
+.youtube-placeholder .icon-youtube {
+	position: absolute;
+	font-size: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 520px) {
+	.introduction {
+		padding: 0px 20px;
+	}
+	.latest-track h2 {
+		/* text-align: center; */
+	}
+}
