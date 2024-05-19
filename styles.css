@@ -1,7 +1,17 @@
+html {
+	/* header height: */
+	scroll-padding-top: 130px;
+}
+
 body {
-	/* background: black; */
-	font-family: 'VT323', monospace;
-	color: blue;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	min-height: 100vh;
+	margin: 0 auto;
+	background: black;
+	/* font-family: 'VT323', monospace; */
+	color: white;
 }
 
 /* .vt323-regular {
@@ -122,11 +132,238 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+/* MAIN PAGE */
+
+.heading-wrapper,
+.content-wrapper {
+	max-width: 960px;
+	border: 2px solid white;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+.footer-wrapper,
+.header-wrapper {
+	display: flex;
+	max-width: 1440px;
+	border: 2px solid white;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.label-logo {
+	border: 2px solid white;
+	margin: 0px;
+}
+
+.header-wrapper {
+	flex-direction: column;
+}
+
+.page-content {
+	z-index: 5;
+	overflow: auto;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background: inherit;
+}
+
+.sticky + .page-content {
+	/* header height: */
+	padding-top: 130px;
+}
+
+/* nav mobile */
+.nav-mobile-handler {
+	position: fixed;
+	z-index: 100;
+	top: 1rem;
+	right: 1rem;
+	padding: 4px;
+	border: grey solid 1px;
+	background: lightgrey;
+	cursor: pointer;
+	display: none;
+}
+
+.menu-close-button {
+	display: none;
+}
+
+.main-nav-mobile {
+	position: fixed;
+	transform: translateY(-100%);
+	display: none;
+	transition: transform 0.2s;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background: black;
+	color: white;
+	list-style: none;
+	padding-top: 4rem;
+	margin: 0 auto;
+}
+
+.show-nav-mobile {
+	transform: translateY(0);
+	display: block;
+}
+
+/* nav mobile */
+
+/* misc styling */
+a {
+	text-decoration: none;
+	color: grey;
+}
+
+a:hover {
+	transition: opacity 0.5s;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+/* misc styling */
+
+/* nav */
+.main-nav-desk {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-nav-desk li {
+	display: inline;
+	/* float: left; */
+}
+
+.desk-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.desk-dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 250px;
+	background-color: #f9f9f9;
+	z-index: 2;
+}
+
+.desk-dropdown:hover .desk-dropdown-content {
+	display: block;
+}
+
+/* nav */
+
+/* footer */
+footer {
+	margin-top: auto;
+}
+
+.follow-wrapper,
+.credits-wrapper {
+	border: 1px solid white;
+}
+
+.follow-wrapper {
+	flex: 1;
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.credits-wrapper {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+	/* text-align: center; */
+}
+
+.copyrights {
+	/* font-family: 'Archivo', sans-serif; */
+	font-size: 12px;
+	letter-spacing: 3px;
+}
+
+.copyrights-title {
+	text-transform: uppercase;
+}
+
+.copyrights-subtitle {
+	font-family: 'VT323', monospace;
+	font-size: 16px;
+}
+
+.credits-box {
+	display: flex;
+	gap: 10px;
+}
+
+.follow-wrapper:last-of-type {
+	/* justify-content: flex-end; */
+}
+
+/* footer */
+/* MAIN PAGE */
+
 @media (max-width: 520px) {
 	.introduction {
 		padding: 0px 20px;
 	}
+
 	.latest-track h2 {
 		/* text-align: center; */
+	}
+
+	html {
+		/* header height: */
+		scroll-padding-top: 112px;
+	}
+
+	.sticky + .page-content {
+		/* header height: */
+		padding-top: 112px;
+	}
+
+	/* TO DO nav dropdown = box z przyciskiem linkiem bands oraz dropdownem lub bez dropdown zwykła pod-lista zespołów z uzyciem styli */
+
+	.header-wrapper {
+		justify-content: center;
+	}
+
+	.heading-wrapper,
+	.content-wrapper {
+		width: auto;
+	}
+
+	.credits-box {
+		flex-direction: column;
+		align-items: center;
+		gap: 0px;
+	}
+
+	.follow-wrapper {
+		gap: 0px;
+	}
+
+	.label-logo {
+		margin: 0 auto;
+	}
+
+	.main-nav-desk {
+		display: none;
+	}
+
+	.nav-mobile-handler {
+		display: inline-block;
 	}
 }
