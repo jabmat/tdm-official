@@ -9,10 +9,10 @@ const menuNav = document.querySelector('.main-nav-mobile');
 // main.innerHTML = '';
 
 // TO DO TURN ON
-entryButton.addEventListener('click', () => {
-	splash.classList.add('opacity-none');
-	splash.innerHTML = '';
-});
+// entryButton.addEventListener('click', () => {
+// 	splash.classList.add('opacity-none');
+// 	splash.innerHTML = '';
+// });
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -107,3 +107,41 @@ menuItems.forEach((menuItem) => {
 });
 
 // 4 toggling nav-mobile
+
+// 5 show nav mobile dropdown content
+const mobileDropdownContent = document.querySelector(
+	'.mobile-dropdown-content'
+);
+const mobileDropdownButton = document.querySelector('.mobile-dropdown-button');
+
+const mobileDropdownContentHandler = () => {
+	if (mobileDropdownContent.style.display === 'flex') {
+		mobileDropdownContent.style.display = 'none';
+		arrowMobile.classList.remove('arrow-u');
+		arrowMobile.classList.add('arrow-d');
+	} else {
+		mobileDropdownContent.style.display = 'flex';
+		arrowMobile.classList.remove('arrow-d');
+		arrowMobile.classList.add('arrow-u');
+	}
+};
+
+mobileDropdownButton.addEventListener('click', mobileDropdownContentHandler);
+// 5 show nav mobile dropdown content
+
+// 6 change dropdown icon on navs
+const deskDropdown = document.querySelector('.desk-dropdown');
+const arrow = document.querySelector('.arrow');
+const arrowMobile = document.querySelector('#arrow-mobile');
+const arrowUp = () => {
+	arrow.classList.remove('arrow-d');
+	arrow.classList.add('arrow-u');
+};
+const arrowDown = () => {
+	arrow.classList.remove('arrow-u');
+	arrow.classList.add('arrow-d');
+};
+
+deskDropdown.addEventListener('mouseover', arrowUp);
+deskDropdown.addEventListener('mouseout', arrowDown);
+// 6 change dropdown icon on navs
