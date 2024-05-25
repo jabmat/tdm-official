@@ -8,12 +8,14 @@
     <link href="./styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <div class="splash">
+    <!-- <div class="splash">
         <section class="introduction">
             <div class="label-entry">
                 <h1>t.d.m. archivist<br>
@@ -35,36 +37,45 @@
                 </div>
             </article>
         </section>
-    </div>
+    </div> -->
 
     <header>
         <div class="header-wrapper">
-            <h1 class="label-logo">
-                <a href="./index.html">
-                    <span class="logo-title">T.D.M. Archivist</span>
-                </a><br>
-                <span class="logo-subtitle">digital label archive</span>
-            </h1>
+            <div class="label-logo-wrapper">
+                <h1 class="label-logo">
+                    <a href="./index.html">
+                        <span class="logo-title">t.d.m. archivist</span>
+                    </a>
+                    <span class="logo-subtitle">digital label archive</span>
+                </h1>
+            </div>
 
             <nav>
-                <ul class="main-nav-desk">
-                    <li>
-                        <a href="#news">news</a>
-                    </li>
-                    <li>
-                        <div class="desk-dropdown">
-                            <a href="#bands">bands</a>
-                            <div class="desk-dropdown-content">
-                                <a href="#into-dark">into dark</a>
-                                <a href="#runopatia">runopatia</a>
-                                <a href="#ropes-notes">ropes notes</a>
+                <div class="main-nav-wrapper">
+                    <ul class="main-nav-desk">
+                        <li>
+                            <a href="#news">news</a>
+                        </li>
+                        <li>
+                            <div class="desk-dropdown">
+                                <a class="dropdown-wrapper" href="#bands">
+                                    bands
+                                    <div class="icon-wrapper">
+                                        <i class="arrow arrow-d"></i>
+                                    </div>
+                                </a>
+                                <div class="desk-dropdown-content">
+                                    <a href="#into-dark">into dark</a>
+                                    <a href="#runopatia">runopatia</a>
+                                    <a href="#ropes-notes">ropes notes</a>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#bio">bio</a>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <a href="#bio">bio</a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- NAV MOBILE -->
                 <ul class="main-nav-mobile">
@@ -72,12 +83,17 @@
                         <a class="menu-mobile-item" href="#news">news</a>
                     </li>
                     <li>
-                        <div class="nav-dropdown">
+                        <div class="mobile-dropdown-container">
                             <a class="menu-mobile-item" href="#bands">bands</a>
-                            <div class="nav-dropdown-content">
-                                <a class="menu-mobile-item" href="#into-dark">into dark</a>
-                                <a class="menu-mobile-item" href="#runopatia">runopatia</a>
-                                <a class="menu-mobile-item" href="#ropes-notes">ropes notes</a>
+                            <div class="mobile-dropdown">
+                                <a class="mobile-dropdown-button icon-wrapper">
+                                    <i id="arrow-mobile" class="arrow arrow-d"></i>
+                                </a>
+                                <div class="mobile-dropdown-content">
+                                    <a class="menu-mobile-item" href="#into-dark">into dark</a>
+                                    <a class="menu-mobile-item" href="#runopatia">runopatia</a>
+                                    <a class="menu-mobile-item" href="#ropes-notes">ropes notes</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -102,12 +118,12 @@
                 </div>
                 <div class="content-wrapper">
                     <article class="entry">
-                        <h3 class="entry-headline">
+                        <h3 class="entry-headline news-headline">
                             <span class="entry-date">april 28th, 2023 - </span>
                             Runopatia signs with t.d.m. archivist
                         </h3>
                         <div class="content-container">
-                            <p class="entry-content">
+                            <p class="entry-content news-content">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has
                                 been the industry's standard
@@ -127,12 +143,12 @@
                         </div>
                     </article>
                     <article class="entry">
-                        <h3 class="entry-headline">
+                        <h3 class="entry-headline news-headline">
                             <span class="entry-date">april 28th, 2023 - </span>
                             Into Dark signs with t.d.m. archivist
                         </h3>
                         <div class="content-container">
-                            <p class="entry-content">
+                            <p class="entry-content news-content">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has
                                 been the industry's standard
@@ -259,12 +275,16 @@
                     facebook
                 </a>
                 <a href="./index.html" target="_blank" aria-label="visit our instagram page">
-                    insta
+                    instagram
+                </a>
+                <a href="./index.html" target="_blank" aria-label="visit our twitter page">
+                    x
                 </a>
             </div>
             <div class="credits-wrapper">
                 <div class="credits-box">
-                    <a href='mailto: tdmarchivist@gmail.com'>tdmarchivist@gmail.com</a>
+                    <a href='mailto: tdmarchivist@gmail.com' class="credits-email"
+                        aria-label="send us email">tdmarchivist@gmail.com</a>
                     <span class="copyrights">
                         by
                         <a href="https://inkn.pl/" target="_blank">
@@ -276,11 +296,14 @@
                 </div>
             </div>
             <div class="follow-wrapper">
-                <a href="./index.html" target="_blank" aria-label="visit our facebook page">
-                    facebook
+                <a href="./index.html" target="_blank" aria-label="visit our bandcamp page">
+                    bandcamp
                 </a>
-                <a href="./index.html" target="_blank" aria-label="visit our instagram page">
-                    insta
+                <a href="./index.html" target="_blank" aria-label="visit our spotify page">
+                    spotify
+                </a>
+                <a href="./index.html" target="_blank" aria-label="visit our soundcloud page">
+                    soundcloud
                 </a>
             </div>
         </div>
