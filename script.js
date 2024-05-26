@@ -9,10 +9,10 @@ const menuNav = document.querySelector('.main-nav-mobile');
 // main.innerHTML = '';
 
 // TO DO TURN ON
-// entryButton.addEventListener('click', () => {
-// 	splash.classList.add('opacity-none');
-// 	splash.innerHTML = '';
-// });
+entryButton.addEventListener('click', () => {
+	splash.classList.add('opacity-none');
+	splash.innerHTML = '';
+});
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -95,7 +95,7 @@ const toggleMenu = () => {
 		menuOpen.style.display = 'block';
 	} else {
 		menuNav.classList.add('show-nav-mobile');
-		menuClose.style.display = 'block';
+		menuClose.style.display = 'flex';
 		menuOpen.style.display = 'none';
 	}
 };
