@@ -9,10 +9,10 @@ const menuNav = document.querySelector('.main-nav-mobile');
 // main.innerHTML = '';
 
 // TO DO TURN ON
-entryButton.addEventListener('click', () => {
-	splash.classList.add('opacity-none');
-	splash.innerHTML = '';
-});
+// entryButton.addEventListener('click', () => {
+// 	splash.classList.add('opacity-none');
+// 	splash.innerHTML = '';
+// });
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -30,14 +30,10 @@ entryButton.addEventListener('click', () => {
 // 1 hiding splash page on click
 
 // 2 yt-videos attach handler
-const loadYT = () => {
-	const container = document.getElementById('yt-placeholder');
+const loadYT = (link, placeholder) => {
 	const iframe = document.createElement('iframe');
 
-	iframe.setAttribute(
-		'src',
-		'https://www.youtube.com/embed/KbaWi_c16qk?si=bnK6B778XjM3JZLl'
-	);
+	iframe.setAttribute('src', link);
 	iframe.setAttribute('width', '560');
 	iframe.setAttribute('height', '315');
 	iframe.setAttribute('title', 'YouTube video player');
@@ -48,11 +44,59 @@ const loadYT = () => {
 	);
 	iframe.setAttribute('allowfullscreen', '');
 	iframe.style.width = '100%';
+	iframe.style.borderRadius = '10px';
 
-	container.innerHTML = '';
-	container.appendChild(iframe);
+	placeholder.innerHTML = '';
+	placeholder.appendChild(iframe);
 };
 // 2 yt-videos attach handler
+
+// yt-links-maintenance
+// linkYtIdOne = 'https://www.youtube.com/embed/KbaWi_c16qk?si=bnK6B778XjM3JZLl';
+// attachYtIdOne = document.getElementById('attach-yt-id-one');
+// attachYtIdOne.addEventListener('click', (e) =>
+// 	loadYT(linkYtIdOne, attachYtIdOne)
+// );
+
+linkYtRpOne = 'https://www.youtube.com/embed/o_b0RjumTnw?si=f3zRrWLTH4Kq6ZRw';
+attachYtRpOne = document.getElementById('attach-yt-rp-one');
+attachYtRpOne.addEventListener('click', (e) =>
+    loadYT(linkYtRpOne, attachYtRpOne)
+);
+
+linkYtRpTwo = 'https://www.youtube.com/embed/an4-PQndA6U?si=oWKixSoRVj8jwUV7';
+attachYtRpTwo = document.getElementById('attach-yt-rp-two');
+attachYtRpTwo.addEventListener('click', (e) =>
+    loadYT(linkYtRpTwo, attachYtRpTwo)
+);
+
+linkYtIdTwo = 'https://www.youtube.com/embed/zJ-yKYWJ380?si=Zj4BiapR2Ypqe2dS';
+attachYtIdTwo = document.getElementById('attach-yt-id-two');
+attachYtIdTwo.addEventListener('click', (e) =>
+	loadYT(linkYtIdTwo, attachYtIdTwo)
+);
+
+linkYtIdThree = 'https://www.youtube.com/embed/coywjXhxwtI?si=ekKtKghxnf0brBB0';
+attachYtIdThree = document.getElementById('attach-yt-id-three');
+attachYtIdThree.addEventListener('click', (e) =>
+	loadYT(linkYtIdThree, attachYtIdThree)
+);
+
+linkYtRnOne =
+	'https://www.youtube.com/embed/videoseries?si=h7RQtb5gunzGPbe7&amp;list=OLAK5uy_mDqITx8adTnli5xEMPNB7qPth5oFYjSqg';
+attachYtRnOne = document.getElementById('attach-yt-rn-one');
+attachYtRnOne.addEventListener('click', (e) =>
+	loadYT(linkYtRnOne, attachYtRnOne)
+);
+
+linkYtRnTwo = 'https://www.youtube.com/embed/mH4pnPEEaMQ?si=EbDonApMoud8py_h';
+attachYtRnTwo = document.getElementById('attach-yt-rn-two');
+attachYtRnTwo.addEventListener('click', (e) =>
+	loadYT(linkYtRnTwo, attachYtRnTwo)
+);
+
+
+// yt-links-maintenance
 
 // 3 header fixed
 window.onscroll = function () {
