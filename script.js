@@ -9,10 +9,10 @@ const menuNav = document.querySelector('.main-nav-mobile');
 // main.innerHTML = '';
 
 // TO DO TURN ON
-// entryButton.addEventListener('click', () => {
-// 	splash.classList.add('opacity-none');
-// 	splash.innerHTML = '';
-// });
+entryButton.addEventListener('click', () => {
+	splash.classList.add('opacity-none');
+	splash.innerHTML = '';
+});
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -52,22 +52,22 @@ const loadYT = (link, placeholder) => {
 // 2 yt-videos attach handler
 
 // yt-links-maintenance
-// linkYtIdOne = 'https://www.youtube.com/embed/KbaWi_c16qk?si=bnK6B778XjM3JZLl';
-// attachYtIdOne = document.getElementById('attach-yt-id-one');
-// attachYtIdOne.addEventListener('click', (e) =>
-// 	loadYT(linkYtIdOne, attachYtIdOne)
-// );
+linkYtIdOne = 'https://www.youtube.com/embed/KbaWi_c16qk?si=bnK6B778XjM3JZLl';
+attachYtIdOne = document.getElementById('attach-yt-id-one');
+attachYtIdOne.addEventListener('click', (e) =>
+	loadYT(linkYtIdOne, attachYtIdOne)
+);
 
 linkYtRpOne = 'https://www.youtube.com/embed/o_b0RjumTnw?si=f3zRrWLTH4Kq6ZRw';
 attachYtRpOne = document.getElementById('attach-yt-rp-one');
 attachYtRpOne.addEventListener('click', (e) =>
-    loadYT(linkYtRpOne, attachYtRpOne)
+	loadYT(linkYtRpOne, attachYtRpOne)
 );
 
 linkYtRpTwo = 'https://www.youtube.com/embed/an4-PQndA6U?si=oWKixSoRVj8jwUV7';
 attachYtRpTwo = document.getElementById('attach-yt-rp-two');
 attachYtRpTwo.addEventListener('click', (e) =>
-    loadYT(linkYtRpTwo, attachYtRpTwo)
+	loadYT(linkYtRpTwo, attachYtRpTwo)
 );
 
 linkYtIdTwo = 'https://www.youtube.com/embed/zJ-yKYWJ380?si=Zj4BiapR2Ypqe2dS';
@@ -94,7 +94,6 @@ attachYtRnTwo = document.getElementById('attach-yt-rn-two');
 attachYtRnTwo.addEventListener('click', (e) =>
 	loadYT(linkYtRnTwo, attachYtRnTwo)
 );
-
 
 // yt-links-maintenance
 
@@ -189,3 +188,14 @@ const arrowDown = () => {
 deskDropdown.addEventListener('mouseover', arrowUp);
 deskDropdown.addEventListener('mouseout', arrowDown);
 // 6 change dropdown icon on navs
+
+// 7 add string to icon-youtube
+const iconYt = document.getElementsByClassName('icon-youtube');
+// const iconYtBefore = document.createElement('span').innerText = '[ PLAY ';
+// const iconYtAfter = document.createElement('span').innerText = ' ]';
+const iconYtBefore = 'PLAY';
+
+for (let icon of iconYt) {
+	icon.innerHTML = iconYtBefore + icon.innerHTML;
+};
+// 7 add string to icon-youtube
