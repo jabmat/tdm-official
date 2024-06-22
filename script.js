@@ -2,17 +2,28 @@
 // DOM variables
 const splash = document.querySelector('.splash');
 const entryButton = document.getElementsByClassName('entry-button')[0];
+const entryButtonX = document.querySelector('.splash-close-button');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const menuNav = document.querySelector('.main-nav-mobile');
 
 // main.innerHTML = '';
 
-// TO DO TURN ON
-entryButton.addEventListener('click', () => {
-	splash.classList.add('opacity-none');
-	splash.innerHTML = '';
+const splashEntryButtons = [entryButton, entryButtonX];
+
+splashEntryButtons.forEach((button) => {
+	button.addEventListener('click', () => {
+		splash.classList.add('opacity-none');
+		splash.innerHTML = '';
+	});
 });
+
+// TO DO TURN ON
+// entryButton.addEventListener('click', () => {
+// 	splash.classList.add('opacity-none');
+// 	splash.innerHTML = '';
+// });
+// TO DO TURN ON
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -27,6 +38,7 @@ entryButton.addEventListener('click', () => {
 // 	}, 2000);
 // });
 // for splash motion - optional
+
 // 1 hiding splash page on click
 
 // 2 yt-videos attach handler
@@ -197,5 +209,5 @@ const iconYtBefore = 'PLAY';
 
 for (let icon of iconYt) {
 	icon.innerHTML = iconYtBefore + icon.innerHTML;
-};
+}
 // 7 add string to icon-youtube
