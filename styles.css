@@ -99,13 +99,40 @@ body {
 	align-items: center;
 }
 
+.splash-close-button {
+	position: fixed;
+	z-index: 100;
+	top: 15px;
+	right: 15px;
+	padding: 0;
+	border: 0;
+	background: inherit;
+	cursor: pointer;
+}
+
+.splash-close-button a {
+	color: #030303;
+}
+
+.splash-close-button i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 300;
+	color: #030303;
+	width: 20px;
+	height: 35px;
+}
+
 .opacity-none {
 	opacity: 0;
 	z-index: -10;
 	transition: all 0.5s;
 }
 
-/* wyśrodkowanie treści introduction */
 .introduction {
 	width: 100%;
 	height: auto;
@@ -147,6 +174,7 @@ body {
 .entry-attach-intro {
 	border-top: 1px solid #808080;
 	padding: 20px 0px 0px 0px;
+	margin: 0 0 20px 0;
 }
 
 .entry-button {
@@ -214,7 +242,7 @@ body {
 
 .splash-social-wrapper {
 	border-top: 1px solid #808080;
-	padding: 20px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
 	display: grid;
 	grid-auto-flow: column;
 	grid-template-columns: 50% 50%;
@@ -225,6 +253,7 @@ body {
 .splash-social-wrapper a {
 	font-size: 18px;
 	text-transform: uppercase;
+	padding-right: 30px;
 }
 
 /* SPLASH */
@@ -304,14 +333,14 @@ footer {
 
 .label-logo-wrapper div {
 	padding: 2px;
-	border: 1.5px solid #d3d3d3;
-	border-radius: 2.5px;
+	/* border: 1.5px solid #d3d3d3; */
+	/* border-radius: 2.5px; */
 }
 
 .label-logo {
 	/* background: #212122; */
-	border: 1.5px solid #d3d3d3;
-	border-radius: 8px;
+	/* border: 1.5px solid #d3d3d3; */
+	/* border-radius: 8px; */
 	padding: 25px 20px;
 	margin: 0;
 	display: flex;
@@ -346,6 +375,14 @@ footer {
 	/* 0 0 92px #AA4A44, */
 	/* 0 0 102px #880808, */
 	/* 0 0 121px #880808; */
+}
+
+.quote-author {
+	text-shadow: 0 0 15px #0fff50, 0 0 30px #90ee90, 0 0 36px #50c878;
+}
+
+.ghost-quote {
+	text-shadow: 0 0 12px #0fff50, 0 0 20px #90ee90, 0 0 36px #50c878;
 }
 
 .header-wrapper {
@@ -938,9 +975,21 @@ footer {
 		padding: 10px 0px 0px 0px;
 	}
 
-    .splash-social h3 {
-        margin-top: 10px;
-    }
+	.splash-social-wrapper a {
+		padding-right: 0;
+	}
+
+	.entry-attach-intro {
+		margin: 0 0 5px 0;
+	}
+
+	.splash-social h3 {
+		margin-top: 10px;
+	}
+
+	.splash-close-button {
+		top: 5px;
+	}
 }
 
 @media (max-width: 350px) {
