@@ -211,3 +211,20 @@ for (let icon of iconYt) {
 	icon.innerHTML = iconYtBefore + icon.innerHTML;
 }
 // 7 add string to icon-youtube
+
+// 8 add language switcher
+// const buttonLangPl = document.querySelector('.lang-pl');
+// const buttonLangEn = document.querySelector('.lang-en');
+
+// buttonLangEn.addEventListener('click', () => {
+// 	document.querySelectorAll('.pl').forEach((pl) => (pl.style.display = 'none'));
+
+// });
+
+// buttonLangPl.addEventListener('click', () => {
+// 	document.querySelectorAll('.en').forEach((en) => {
+// 		en.style.display = 'none';
+// 	});
+// });
+
+// 8 add language switcher
