@@ -18,12 +18,14 @@ splashEntryButtons.forEach((button) => {
 	});
 });
 
-// TO DO TURN ON
+// splash ON / OFF
+// splash.style.display = 'none';
+// splash ON / OFF
+
 // entryButton.addEventListener('click', () => {
 // 	splash.classList.add('opacity-none');
 // 	splash.innerHTML = '';
 // });
-// TO DO TURN ON
 
 // for splash motion - optional
 // document.addEventListener('DOMContentLoaded', (e) => {
@@ -205,10 +207,18 @@ deskDropdown.addEventListener('mouseout', arrowDown);
 const iconYt = document.getElementsByClassName('icon-youtube');
 // const iconYtBefore = document.createElement('span').innerText = '[ PLAY ';
 // const iconYtAfter = document.createElement('span').innerText = ' ]';
-const iconYtBefore = 'PLAY';
+const iconYtBefore = () => {
+	if (document.querySelector('html').attributes[0].value === 'en') {
+		return 'PLAY';
+	} else {
+		return 'ODTWARZAJ';
+	}
+};
+
+console.log(iconYtBefore());
 
 for (let icon of iconYt) {
-	icon.innerHTML = iconYtBefore + icon.innerHTML;
+	icon.innerHTML = iconYtBefore() + icon.innerHTML;
 }
 // 7 add string to icon-youtube
 
