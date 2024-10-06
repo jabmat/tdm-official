@@ -66,7 +66,7 @@ const loadYT = (link, placeholder) => {
 // 2 yt-videos attach handler
 
 // yt-links-maintenance
-linkYtIdOne = 'https://www.youtube.com/embed/KbaWi_c16qk?si=bnK6B778XjM3JZLl';
+linkYtIdOne = 'https://www.youtube.com/embed/kK7SeaqCzqo?si=DLZ4kUH46JnRjMPp';
 attachYtIdOne = document.getElementById('attach-yt-id-one');
 attachYtIdOne.addEventListener('click', (e) =>
 	loadYT(linkYtIdOne, attachYtIdOne)
@@ -90,7 +90,8 @@ attachYtIdTwo.addEventListener('click', (e) =>
 	loadYT(linkYtIdTwo, attachYtIdTwo)
 );
 
-linkYtIdThree = 'https://www.youtube.com/embed/coywjXhxwtI?si=ekKtKghxnf0brBB0';
+linkYtIdThree =
+	'https://www.youtube.com/embed/videoseries?si=ejcqVHWURcnUkOxd&amp;list=OLAK5uy_kyjJA-YJZ9btRkOCJSNeWOJoBKVTiDbN8';
 attachYtIdThree = document.getElementById('attach-yt-id-three');
 attachYtIdThree.addEventListener('click', (e) =>
 	loadYT(linkYtIdThree, attachYtIdThree)
