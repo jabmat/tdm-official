@@ -97,6 +97,11 @@ attachYtRpThree.addEventListener('click', (e) =>
 	loadYT(linkYtRpThree, attachYtRpThree)
 );
 
+attachYtRpThreeTwo = document.getElementById('attach-yt-rp-three-two');
+attachYtRpThreeTwo.addEventListener('click', (e) =>
+	loadYT(linkYtRpThree, attachYtRpThreeTwo)
+);
+
 
 
 
