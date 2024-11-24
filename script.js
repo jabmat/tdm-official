@@ -91,19 +91,28 @@ attachYtRpTwo.addEventListener('click', (e) =>
 // );
 
 // short: ozLA9m0Qo6s
-linkYtRpThree = 'https://www.youtube.com/embed/ozLA9m0Qo6s?si=I9Zvc5uH29KRkn1D';
-attachYtRpThree = document.getElementById('attach-yt-rp-three');
-attachYtRpThree.addEventListener('click', (e) =>
-	loadYT(linkYtRpThree, attachYtRpThree)
+// linkYtRpThree = 'https://www.youtube.com/embed/ozLA9m0Qo6s?si=I9Zvc5uH29KRkn1D';
+// attachYtRpThree = document.getElementById('attach-yt-rp-three');
+// attachYtRpThree.addEventListener('click', (e) =>
+// 	loadYT(linkYtRpThree, attachYtRpThree)
+// );
+
+// attachYtRpThreeTwo = document.getElementById('attach-yt-rp-three-two');
+// attachYtRpThreeTwo.addEventListener('click', (e) =>
+// 	loadYT(linkYtRpThree, attachYtRpThreeTwo)
+// );
+
+// rp-serce-krwawe-lyrics: mWsI6yZupOA
+linkYtRpFour = 'https://www.youtube.com/embed/mWsI6yZupOA?si=QkvIvY71SbtVv36u';
+attachYtRpFour = document.getElementById('attach-yt-rp-four');
+attachYtRpFour.addEventListener('click', (e) =>
+	loadYT(linkYtRpFour, attachYtRpFour)
 );
 
-attachYtRpThreeTwo = document.getElementById('attach-yt-rp-three-two');
-attachYtRpThreeTwo.addEventListener('click', (e) =>
-	loadYT(linkYtRpThree, attachYtRpThreeTwo)
+attachYtRpFourTwo = document.getElementById('attach-yt-rp-four-two');
+attachYtRpFourTwo.addEventListener('click', (e) =>
+	loadYT(linkYtRpFour, attachYtRpFourTwo)
 );
-
-
-
 
 linkYtIdTwo = 'https://www.youtube.com/embed/zJ-yKYWJ380?si=Zj4BiapR2Ypqe2dS';
 attachYtIdTwo = document.getElementById('attach-yt-id-two');
